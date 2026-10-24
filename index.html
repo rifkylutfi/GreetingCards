@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Selamat HBD Yahh... 🎉</title>
+</head>
+
+<body>
+    <!-- Layar pembuka -->
+    <div class="intro" id="intro">
+        <div class="intro-box">
+            <div class="intro-emoji">🎁</div>
+            <h4 class="color1" id="typed"></h4>
+            <button id="openBtn" class="invisible">Buka Kado 🎉</button>
+        </div>
+    </div>
+
+    <!-- Umur real-time -->
+    <div class="age" id="age"></div>
+
+    <!-- Menu bawah -->
+    <div class="menu">
+        <button data-modal="cake">🎂 Lilin</button>
+        <button data-modal="game">🎈 Game</button>
+        <button data-modal="fortune">🔮 Ramalan</button>
+        <button data-modal="ask">🙈 Traktir</button>
+    </div>
+
+    <!-- Musik -->
+    <button class="music-btn" id="musicBtn" title="Musik">🎵</button>
+    <audio id="bgm" loop src="happy-birthday.mp3"></audio>
+
+    <canvas id="confetti"></canvas>
+    <div class="floaters" id="floaters"></div>
+
+    <!-- Kartu -->
+    <div class="card">
+        <div class="imgBox">
+            <div class="bark"></div>
+            <img src="cover.jpg" alt="Sampul kartu">
+        </div>
+        <div class="details">
+            <h4 class="color1 pulse">🎉HAPPY BIRTHDAY🎂</h4>
+            <h4 class="color2">MABA (katanya) :D</h4>
+            <p>Cie udah 23, <span class="wiggle">🥳</span></p>
+            <p>Umur nambah, beban hidup juga,</p>
+            <p>Selamat di usia 23y nya ya! 🎈</p>
+            <p>Semoga apa yang di semogakan,</p>
+            <p>tersemogakan. ✨</p>
+            <p>Lancar kuliahnya, semoga hasil</p>
+            <p>observasinya ga ditolak lagi.</p>
+            <p>Maaf ya gabisa dateng di hari H,</p>
+            <p>cuma bisa kasih ini :)</p>
+            <p>Sukses terus ya!</p>
+            <p>Kapan-kapan kita jogging oke.</p>
+            <p class="text-right">Congrats Repeat Year, Sopiii... 🎊</p>
+            <p class="text-right">Iki Ganteng. 😎</p>
+        </div>
+    </div>
+
+    <!-- Modal: Tiup lilin -->
+    <div class="modal" id="modal-cake">
+        <div class="modal-box">
+            <button class="close">✕</button>
+            <h4 class="color1">Make a wish, lalu tiup lilinnya! 🎂</h4>
+            <div class="cake">
+                <div class="candles">
+                    <div class="candle"><i class="flame"></i></div>
+                    <div class="candle"><i class="flame"></i></div>
+                    <div class="candle"><i class="flame"></i></div>
+                </div>
+                <div class="cake-top"></div>
+                <div class="cake-bottom"></div>
+            </div>
+            <p id="cakeHint">Tap lilinnya, atau tiup ke mikrofon 🎤</p>
+            <button class="btn" id="micBtn">🎤 Tiup pakai mikrofon</button>
+        </div>
+    </div>
+
+    <!-- Modal: Game balon -->
+    <div class="modal" id="modal-game">
+        <div class="modal-box">
+            <button class="close">✕</button>
+            <h4 class="color2">Pecahin balonnya! 🎈</h4>
+            <p>Skor: <span id="score">0</span> &nbsp;|&nbsp; ⏱️ <span id="time">15</span>s</p>
+            <div class="arena" id="arena"></div>
+            <p id="gameMsg" class="small">🎁 nilainya 3 poin!</p>
+            <button class="btn" id="startGame">Mulai</button>
+        </div>
+    </div>
+
+    <!-- Modal: Ramalan -->
+    <div class="modal" id="modal-fortune">
+        <div class="modal-box">
+            <button class="close">✕</button>
+            <h4 class="color1">Ramalan masa depan 🔮</h4>
+            <button class="crystal" id="crystal" aria-label="Bola kristal">
+                <span class="crystal-icon">🔮</span>
+            </button>
+            <div class="crystal-base"></div>
+            <div class="fortune" id="fortuneText">Tap bola kristalnya untuk melihat masa depan ✨</div>
+        </div>
+    </div>
+
+    <!-- Modal: Tombol kabur -->
+    <div class="modal" id="modal-ask">
+        <div class="modal-box">
+            <button class="close">✕</button>
+            <h4 class="color2">Pertanyaan penting 🙈</h4>
+            <p class="ask-q">Traktir es krim Family Mart 🍦</p>
+            <div class="runbox" id="runbox">
+                <button class="btn" id="yesBtn">Gaassss</button>
+                <button class="btn no" id="noBtn">G</button>
+            </div>
+            <p id="askMsg" class="small">Pilih dengan bijak...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
